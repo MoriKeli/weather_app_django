@@ -122,6 +122,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR/'Weather_project/static/css'),
     os.path.join(BASE_DIR/'Weather_project/static/images'),
     os.path.join(BASE_DIR/'Weather_project/static/js'),
+    os.path.join(BASE_DIR/'Weather_project/static/images/icons'),
     os.path.join(BASE_DIR/'Weather_project/static/bootstrap/css'),
     os.path.join(BASE_DIR/'Weather_project/static/bootstrap/js'),
 

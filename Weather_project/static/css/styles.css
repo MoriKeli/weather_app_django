@@ -75,15 +75,19 @@ form button img {
 
 .image-card h5 {
     text-align: center;
-    /* margin-left: 2%; */
+    margin-left: 6%;
+    /* margin-bottom: 2%; */
+    font-size: 27px;
 }
 .description {
     font: 17px 'Times New Roman', Times, serif;
 }
-.image-card .img {
-    height: 40px;
-    width: 40px;
-    margin-left: 40%;
+.image-card img {
+    height: 150px;
+    width: 150px;
+    margin-top: -1%;
+    margin-left: 33%;
+    border-radius: 60%;
 }
 .description > .weather-info {
     margin-top: -5%;
@@ -95,7 +99,7 @@ form button img {
 .description h4 {
     text-align: left;
     margin-left: 44%;
-    margin-top: -0.1%;
+    margin-top: -7.3%;
     padding: 10px;
 }
 p {

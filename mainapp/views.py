@@ -11,7 +11,7 @@ def get_city(request):
 
         city = request.POST['city_name']
 
-        request_url = f'{BASE_URL}?appid={API_KEY}&q={city}'
+        request_url = f'{BASE_URL}?appid={API_KEY}&q={city}&units=metric'
         response = requests.get(request_url)
 
         if response.status_code == 200:
