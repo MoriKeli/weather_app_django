@@ -1,4 +1,4 @@
-# weather_app_django
+# Weather website using django & Openweather API
 
 This is a simple web-based weather app. The website uses OpenWeather API to fetch current weather of differrent cities and towns around the world.
 
