@@ -1,0 +1,21 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles.css' %}">
+<link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'slides.css' %}">
+
+<div class="nav-bar">
+    <nav>
+        <label class="logo">Weather Web App</label>
+    </nav>
+</div>
+
+{% block content %}
+{% endblock %}
+
+<div class="footer">
+    <footer>&copy; 2022 Weather Web App | ALL RIGHTS RESERVED.</footer>
+    <div class="nav-footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Acknowledgements</a>
+    </div>
+</div>

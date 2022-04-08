@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+<body>
+    {% block content %}
+    <div class="form-container">
+        {% for message in messages %}
+            <div class="alert alert-{{message.tags}}">
+                <strong>{{message}}</strong>
+            </div>
+        {% endfor %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter city name..." name="city_name" required>
+            <button type="submit"><img src="{% static 'search-icon.png' %}" alt="search"></button>
+        </form>
+    </div>
+    <div class="image-card-container">
+        <div class="image-card">
+            <h5>{{city}}, {{country}}</h5>
+            <div class="description">
+                <div class="img">
+                    {{icon}}
+                </div>
+                <div class="weather-info">
+                    <h4>
+                        <p>Longitude: {{long}}</p><p>Latitude: {{lat}}</p>
+                        Temperature: {{temperature}}<br>
+                        Description: {{weather}}<br>
+                        Humidity: {{humidity}}<br>
+                        Wind: {{wind_speed}} m/s<br>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'slides.js' %}"></script>
+    {% endblock %}
+</body>
+</html>
