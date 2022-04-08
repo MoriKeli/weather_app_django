@@ -9,7 +9,7 @@ Technologies used:
  
  Type in any known city name and press Enter or click the search button. The following details will be displayed:
   - City
-  - country
+  - country code
   - latitude & longitude
   - temperature
   - weather description 
