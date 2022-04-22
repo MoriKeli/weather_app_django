@@ -28,9 +28,17 @@ def get_city(request):
             icon = data['weather'][0]['icon']
 
             context = {'city':str(city).title(), 'weather': str(weather).title(), 'temperature': temp, 'country': country,
-             'long': longitude, 'lat': latitude, 'humidity':humidity, 'wind_speed': wind_speed, 'icon': icon}
+             'long': round(longitude, 2), 'lat': round(latitude, 2), 'humidity':humidity, 'wind_speed': wind_speed, 'icon': icon}
         
+            google_api_key = ""
+            place_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400"
+
+
         else:
             messages.error(request, 'An error occurred! 1.Did you enter correct city name? 2. Are you connected to the internet?')
             return redirect('/')
     return render(request, 'index.html', context)
+
+def acknowledge(request):
+    return render(request, 'acknowledgement.html')
+

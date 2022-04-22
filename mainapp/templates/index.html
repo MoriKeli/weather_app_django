@@ -23,24 +23,20 @@
         </form>
     </div>
     <div class="image-card-container">
-       {% if city %}
+        {% if city %}
         <div class="image-card">
-            <h5>{{city}}, {{country}}</h5>
+            <img src="{% static 'weather-icons.jpg' %}" alt="">
             <div class="description">
-                <img src="{% static 'weather-icons.jpg' %}" alt="">
-                
-                <div class="weather-info">
-                    <h4>
-                        <p>Longitude: {{long}}</p><p>Latitude: {{lat}}</p>
-                        Temperature: {{temperature}} Celcius<br>
-                        Description: {{weather}}<br>
-                        Humidity: {{humidity}}&percnt;<br>
-                        Wind: {{wind_speed}} m/s<br>
-                    </h4>
-                </div>
+                <h4>{{city}}, {{country}}</h>
+                <h5>Longitude: {{long}}, Latitude: {{lat}}</h5>
+                <h5>Temperature: {{temperature}}&deg;C</h5>
+                <h5>Description: {{weather}}</h5>
+                <h5>Humidity: {{humidity}}&percnt;</h5>
+                <h5>Wind: {{wind_speed}} m/s</h5>
             </div>
         </div>
         {% endif %}
+        
     </div>
     <script src="{% static 'slides.js' %}"></script>
     {% endblock %}
