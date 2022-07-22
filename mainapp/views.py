@@ -6,7 +6,7 @@ import json
 def get_city(request):
     context = {}
     if request.method == 'POST':
-        API_KEY = '2f39d8d235dae6ac6175dd151d49b198'
+        API_KEY = '<paste your API_KEY here>'
         BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
         city = request.POST['city_name']
@@ -35,7 +35,7 @@ def get_city(request):
 
 
         else:
-            messages.error(request, 'An error occurred! 1.Did you enter correct city name? 2. Are you connected to the internet?')
+            messages.error(request, 'An error occurred! 1.Did you enter correct city name? 2. Are you connected to the internet? 3. Do you have an API_KEY?')
             return redirect('/')
     return render(request, 'index.html', context)
 
