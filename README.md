@@ -2,7 +2,7 @@
 
 This is a simple web-based weather app. The website uses OpenWeather API to fetch current weather of differrent cities and towns around the world.
 The website will not work unless you have your own API_KEY to access OpenWeather API. I removed my API_KEY for security reasons.
-To have your own API_KEY, create an account with OpenWeather -> https://openweathermap.org
+To have your own API_KEY, create an account with OpenWeather -> https://openweathermap.org , once you have created an account, click the "API KEY" to genrate personal API KEY.
 
 Technologies used:
   - HTML, CSS & JavaScript
